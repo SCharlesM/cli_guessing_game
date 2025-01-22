@@ -44,13 +44,16 @@ while (number_of_guesses > 0) :
     guess = int(input('What is your guess? '))
     if guess < 1 or guess > 100 :
         print("\nThat is not a valid guess, choose a number between 1 and 100")
+
     elif guess == random_integer :
         print('\nCongratulations! You guessed the correct number')
         break
+
     elif guess > random_integer :
         print('\nThat guess is too high')
         number_of_guesses -= 1
         print('You have',number_of_guesses,'guesses remaining')
+
     elif guess < random_integer :
         print('\nThat guess is too low')
         number_of_guesses -= 1
@@ -62,13 +65,3 @@ while (number_of_guesses > 0) :
         break   
 
 print("\nGAME OVER")
-
-"""
-if __name__ =="__main__":
-
-    welcome()
-    select_difficulty()
-    guess_loop()
-    end_game()
-
-"""
